@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Django Project{% endblock %}</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>My Django Project</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'profesores:profesor_list' %}">Profesores</a>                </li>
+                <li><a href="{% url 'estudiantes:estudiante_list' %}">Estudiantes</a></li>
+                <li><a href="{% url 'cursos:curso_list' %}">Cursos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Content will go here -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Django Project</p>
+    </footer>
+
+    <!-- Link to your JavaScript file -->
+    <!-- <script src="{% static 'scripts.js' %}"></script> -->
+</body>
+</html>

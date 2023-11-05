@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - My Django Project{% endblock %}
+
+{% block content %}
+    <h2>Welcome to the Home Page</h2>
+    <p>This is the main page of the Django project.</p>
+
+    <form action="{% url 'search_results' %}" method="get" class="search-form">
+        <input type="text" name="name" placeholder="Enter name">
+        <input type="text" name="surname" placeholder="Enter surname">
+        <button type="submit">Search</button>
+    </form>
+    
+    <p><a href="{% url 'estudiantes:register_estudiante' %}">Register a new student</a></p>
+    <p><a href="{% url 'profesores:register_profesor' %}">Register a new profesor</a></p>
+{% endblock %}
+

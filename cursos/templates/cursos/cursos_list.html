@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Cursos - My Django Project{% endblock %}
+
+{% block content %}
+    <h2>List of Cursos</h2>
+    <!-- And again, dynamic content will be added here -->
+    <ul>
+        {% for curso in cursos %}
+            <li>{{ curso.title }} - Code: {{ curso.code }}</li>
+        {% empty %}
+            <li>No cursos available.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

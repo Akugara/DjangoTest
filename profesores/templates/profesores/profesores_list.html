@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Profesores - My Django Project{% endblock %}
+
+{% block content %}
+    <h2>List of Profesores</h2>
+    <!-- You will later replace this with dynamic content from your database -->
+    <ul>
+        {% for profesor in profesores %}
+            <li>{{ profesor.name }} - {{ profesor.age }} years old</li>
+        {% empty %}
+            <li>No profesores available.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
