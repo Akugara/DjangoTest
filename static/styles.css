@@ -3,11 +3,19 @@ body {
     background-color: rgb(2, 2, 60);
 }
 
+input, button {
+    font-family: monospace, sans-serif;
+}
+
 h1{
     color: rgb(250, 250, 250);
 }
 
 h2 {
+    color: rgb(250, 250, 250);
+}
+
+h3 {
     color: rgb(250, 250, 250);
 }
 
@@ -30,7 +38,7 @@ ul li:hover {
     background-color: #dddddd7a;
 }
 ul li a:hover {
-    color: rgb(255, 215, 16);
+    color: rgb(219, 182, 0);
 }
 
 p {
@@ -41,7 +49,6 @@ p {
     /* Example styles */
     margin: 20px 0;
     padding: 10px;
-    background-color: #f8f8f8;
     border-radius: 4px;
 }
 
@@ -50,5 +57,9 @@ p {
     /* Example styles for input fields and button */
     margin: 5px;
     padding: 10px;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
     border: 1px solid #ddd;
+    border-radius: 5px;
 }
+
