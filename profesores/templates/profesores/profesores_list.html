@@ -3,13 +3,13 @@
 {% block title %}Profesores - My Django Project{% endblock %}
 
 {% block content %}
-    <h2>List of Profesores</h2>
-    <!-- You will later replace this with dynamic content from your database -->
+    <h2>Lista de profesores</h2>
+    <!-- acá se van a mostrar los profesores que se vayan agregando a la base de datos -->
     <ul>
         {% for profesor in profesores %}
-            <li>{{ profesor.name }} - {{ profesor.age }} years old</li>
+            <li>Nombre: {{ profesor.name }} {{ profesor.surname }} - Años {{ profesor.age }} - Materia a cargo: {{ profesor.course }} - Género {{ profesor.gender }} </li>
         {% empty %}
-            <li>No profesores available.</li>
+            <li>No hay profesores disponibles.</li>
         {% endfor %}
     </ul>
 {% endblock %}

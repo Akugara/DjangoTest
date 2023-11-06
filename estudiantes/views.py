@@ -18,4 +18,4 @@ def register_estudiante(request):
             return redirect('estudiantes:estudiante_list')
     else:
         form = EstudianteRegistrationForm()
-    return render(request, 'estudiantes/register.html', {'form': form})
+    return render(request, 'estudiantes/register_estudiante.html', {'form': form})

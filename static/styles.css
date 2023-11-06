@@ -1,7 +1,16 @@
 body {
     font-family: monospace, sans-serif;
     background-color: rgb(2, 2, 60);
+    margin: 0;
+    padding: 20px; /* This adds space around the content inside the body */
 }
+
+.container {
+    max-width: 1200px; /* This sets the maximum width of the container */
+    margin: 0 auto; /* This centers the container */
+    padding: 20px; /* This adds padding inside the container */
+}
+
 
 input, button {
     font-family: monospace, sans-serif;
@@ -45,21 +54,67 @@ p {
     color: rgb(250, 250, 250);
 }
 
+/* Estilos para el search field forms */
+
 .search-form {
-    /* Example styles */
-    margin: 20px 0;
+    margin: 20px auto; /* Centers the form */
     padding: 10px;
     border-radius: 4px;
+    max-width: 100%; 
 }
 
 .search-form input,
 .search-form button {
-    /* Example styles for input fields and button */
-    margin: 5px;
+    display: block; /* This will make them stack vertically */
+    width: 100%; /* Adjust the 100% width by subtracting the total left and right padding and borders */
+    margin: 5px 0; /* Top and bottom margins, no left and right */
     padding: 10px;
     color: #000000;
     background-color: rgb(255, 255, 255);
     border: 1px solid #ddd;
     border-radius: 5px;
+    box-sizing: border-box; 
 }
 
+/* If you have a separate button and want it to align with the input */
+.search-form button {
+    width: 100%;
+}
+
+
+/* Estilos para los register field forms */
+.registration-form {
+    margin: 20px auto; 
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 100%; 
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea,
+.registration-form button {
+    box-sizing: border-box; 
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.registration-form button {
+    margin-top: 40px;
+    background-color: #ffffff; 
+    border: 1px solid #ddd;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.registration-form label {
+    margin-top: 20px;
+}
+
+.form-field {
+    margin-bottom: 10px; /* Adds space between each field */
+}

@@ -3,13 +3,13 @@
 {% block title %}Estudiantes - My Django Project{% endblock %}
 
 {% block content %}
-    <h2>List of Estudiantes</h2>
+    <h2>Lista de estudiantes</h2>
     <!-- Similarly, this will be replaced with data from the database -->
     <ul>
         {% for estudiante in estudiantes %}
-            <li>{{ estudiante.name }} - {{ estudiante.surname }} - {{ estudiante.age }} years old</li>
+            <li>Nombre: {{ estudiante.name }} {{ estudiante.surname }} - Edad:{{ estudiante.age }} - Género {{ estudiante.gender}} </li>
         {% empty %}
-            <li>No estudiantes available.</li>
+            <li>No hay estudiantes disponibles.</li>
         {% endfor %}
     </ul>
 {% endblock %}

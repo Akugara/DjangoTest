@@ -4,31 +4,31 @@
 <h2>Search Results</h2>
 
 {% if estudiantes or profesores %}
-    <h3>Students</h3>
+    <h3>Estudiantes</h3>
     <ul>
         {% for estudiante in estudiantes %}
             <li>
-                <strong>Name:</strong> {{ estudiante.name }} {{ estudiante.surname }}<br>
-                <strong>Age:</strong> {{ estudiante.age }}<br>
-                <strong>Gender:</strong> {{ estudiante.get_gender_display }}<br>
-                <strong>Grades:</strong> {{ estudiante.grades }}
+                <strong>Nombre:</strong> {{ estudiante.name }} {{ estudiante.surname }}<br>
+                <strong>Edad:</strong> {{ estudiante.age }}<br>
+                <strong>Género:</strong> {{ estudiante.get_gender_display }}<br>
+                <strong>Notas:</strong> {{ estudiante.grades }}
             </li>
         {% endfor %}
     </ul>
 
-    <h3>Professors</h3>
+    <h3>Profesores</h3>
     <ul>
         {% for profesor in profesores %}
             <li>
-                <strong>Name:</strong> {{ profesor.name }} {{ profesor.surname }}<br>
-                <strong>Age:</strong> {{ profesor.age }}<br>
-                <strong>Gender:</strong> {{ profesor.get_gender_display }}<br>
-                <strong>Course:</strong> {{ profesor.course }}
+                <strong>Nombre:</strong> {{ profesor.name }} {{ profesor.surname }}<br>
+                <strong>Edad:</strong> {{ profesor.age }}<br>
+                <strong>Género:</strong> {{ profesor.get_gender_display }}<br>
+                <strong>Curso:</strong> {{ profesor.course }}
             </li>
         {% endfor %}
     </ul>
 {% else %}
-    <p>No results found.</p>
+    <p>No se ha encontrado ningún usuario registrado con ese nombre.</p>
 {% endif %}
 
 {% endblock %}

@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Django Project{% endblock %}</title>
     <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'styles.css' %}?v=6">
+
 </head>
-<body>
+<body><div class="container">
     <header>
-        <h1>Pre entrega 3 coderhouse</h1>
+        <h1>Coderhouse / Django</h1>
         <nav>
             <ul>
-                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
                 <li><a href="{% url 'profesores:profesor_list' %}">Profesores</a>                </li>
                 <li><a href="{% url 'estudiantes:estudiante_list' %}">Estudiantes</a></li>
                 <li><a href="{% url 'cursos:curso_list' %}">Cursos</a></li>
@@ -28,10 +29,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 My Django Project</p>
+        <p>&copy; 2023 My Django Project / CoderHouse / Agustín Garagorry</p>
     </footer>
 
-    <!-- Link to your JavaScript file -->
-    <!-- <script src="{% static 'scripts.js' %}"></script> -->
-</body>
+</div></body>
 </html>
